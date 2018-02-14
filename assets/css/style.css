@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+		body {
+	background: url("https://orig00.deviantart.net/84f1/f/2014/319/5/0/pokemon_x_and_y_battle_background_18_by_phoenixoflight92-d86i02s.png");
+	font-family: 'Russo One', sans-serif;
+	color: #ffff00;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+	display:block;
+	width: 400px;
+	height:auto;
+	margin: 2px;
+}
+.playerDiv {
+	
+	display: inline-block;
+	width: 150px;
+	height: 120px;
+	margin: 2px;
+}
+
+.enemyDiv {
+
+	display: inline-block;
+	width: 150px;
+	height: 120px;
+	border: solid 3px red;
+	margin: 2px;
+}
+
+.defenderDiv {
+	
+	display: inline-block;
+	width: 150px;
+	height: 120px;
+
+	margin: 2px;
+}
+
+img {
+	height: 60px;
+	width: 90px;
+	display: block;
+	margin: auto;
+}
+
+p {
+	text-align: center;
+}
+
+.resetButton {
+	display: none;
+}

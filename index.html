@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Pokemon Battle Game</title>
+
+
+  	<!--Add some CSS animation-->
+  	<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<!-- Use google font Russo One-->
+  	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+	
+	<!-- set up style sheets -->
+	<!-- reset not needed because using bootstrap -->
+	<!-- <link rel="stylesheet" type="text/css" href="/assets/css/reset.css"> -->
+	<!-- Link in locally stored min version of bootstrap.css -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+	<!-- begin the bootstrap container -->
+	<div class="container">
+
+		<!-- Header introducing the game -->
+		<div>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" class="title animated rubberBand" alt="Pokemon Battle">
+		</div>
+
+		<!-- First row of tiles of available characters-->
+		<div class="playerDiv gameCharacter" id="rowOnePikachu" value="Pikachu">
+			<p>Pikachu</p>
+			<img src="http://rs1263.pbsrc.com/albums/ii631/Pokemon-Vampire-Knight-lover/pikachu_.gif~c200" alt="Pikachu">
+			<p class="PikachuHealth">HEALTH</p>
+		</div>
+		<div class="playerDiv gameCharacter" id="rowOneSquirtle" value="Squirtle">
+			<p>Squirtle</p>
+			<img src="https://66.media.tumblr.com/ddd22fe10a485ed56a46d958c058a970/tumblr_n9lnpepqkW1scncwdo1_500.gif" alt="Squirtle">
+			<p class="SquirtleHealth">HEALTH</p>
+		</div>
+		<div class="playerDiv gameCharacter" id="rowOneCharmander" value="Charmander">
+			<p>Charmander</p>
+			<img src="http://rs772.pbsrc.com/albums/yy9/HybridRainbow88/Charmander.gif~c200" alt="Charmander">
+			<p class="CharmanderHealth">HEALTH</p>
+		</div>
+		<div class="playerDiv gameCharacter" id="rowOneBulbasour" value="Bulbasour">
+			<p>Bulbasour</p>
+			<img src="https://media.giphy.com/media/iIWW4BM6nNWTu/giphy.gif" alt="Bulbasour">
+			<p class="BulbasourHealth">HEALTH</p>
+		</div>
+		
+		<h2>Your Character:</h2>
+
+		<!-- Second row of tiles of selected character -->
+		<div class="playerDiv gameCharacter" id="rowTwoPikachu" value="Pikachu">
+			<p>Pikachu</p>
+			<img src="http://rs1263.pbsrc.com/albums/ii631/Pokemon-Vampire-Knight-lover/pikachu_.gif~c200" alt="Pikachu">
+			<p class="PikachuHealth">HEALTH</p>
+		</div>
+		<div class="playerDiv gameCharacter" id="rowTwoSquirtle" value="Squirtle">
+			<p>Squirtle</p>
+			<img src="https://66.media.tumblr.com/ddd22fe10a485ed56a46d958c058a970/tumblr_n9lnpepqkW1scncwdo1_500.gif" alt="Squirtle">
+			<p class="SquirtleHealth">HEALTH</p>
+		</div>
+		<div class="playerDiv gameCharacter" id="rowTwoCharmander" value="Charmander">
+			<p>Charmander</p>
+			<img src="http://rs772.pbsrc.com/albums/yy9/HybridRainbow88/Charmander.gif~c200" alt="Charmander">
+			<p class="CharmanderHealth">HEALTH</p>
+		</div>
+		<div class="playerDiv gameCharacter" id="rowTwoBulbasour" value="Bulbasour">
+			<p>Bulbasour</p>
+			<img src="https://media.giphy.com/media/iIWW4BM6nNWTu/giphy.gif" alt="Bulbasour">
+			<p class="BulbasourHealth">HEALTH</p>
+		</div>
+
+		<h2>Enemies Available To Attack:</h2>
+
+		<!-- Third row of tiles for available enemies -->
+		<div class="enemyDiv gameCharacter" id="rowThreePikachu" value="Pikachu">
+			<p>Pikachu</p>
+			<img src="http://rs1263.pbsrc.com/albums/ii631/Pokemon-Vampire-Knight-lover/pikachu_.gif~c200" alt="Pikachu">
+			<p class="PikachuHealth">HEALTH</p>
+		</div>
+		<div class="enemyDiv gameCharacter" id="rowThreeSquirtle" value="Squirtle">
+			<p>Squirtle</p>
+			<img src="https://66.media.tumblr.com/ddd22fe10a485ed56a46d958c058a970/tumblr_n9lnpepqkW1scncwdo1_500.gif" alt="Squirtle">
+			<p class="SquirtleHealth">HEALTH</p>
+		</div>
+		<div class="enemyDiv gameCharacter" id="rowThreeCharmander" value="Charmander">
+			<p>Charmander</p>
+			<img src="http://rs772.pbsrc.com/albums/yy9/HybridRainbow88/Charmander.gif~c200" alt="Charmander">
+			<p class="CharmanderHealth">HEALTH</p>
+		</div>
+		<div class="enemyDiv gameCharacter" id="rowThreeBulbasour" value="Bulbasour">
+			<p>Bulbasour</p>
+			<img src="https://media.giphy.com/media/iIWW4BM6nNWTu/giphy.gif" alt="Bulbasour">
+			<p class="BulbasourHealth">HEALTH</p>
+		</div>
+
+		<h2>Fight Section</h2>
+
+		<button type="button" class="btn btn-warning attackButton">ATTACK</button>
+
+		<h2>Defender</h2>
+
+		<!-- Fourth row of tiles for defender -->
+		<div class="defenderDiv gameCharacter" id="rowFourPikachu" value="Pikachu">
+			<p>Pikachu</p>
+			<img src="http://vignette4.wikia.nocookie.net/pokemon/images/5/5b/Pikachu_Back_XY.gif/revision/latest?cb=20141009080948" alt="Pikachu">
+			<p class="PikachuHealth">HEALTH</p>
+		</div>
+		<div class="defenderDiv gameCharacter" id="rowFourSquirtle" value="Squirtle">
+			<p>Squirtle</p>
+			<img src="http://vignette3.wikia.nocookie.net/pokemon/images/d/d8/Squirtle_XY_Back_Sprite.gif/revision/latest?cb=20141031154426" alt="Squirtle">
+			<p class="SquirtleHealth">HEALTH</p>
+		</div>
+		<div class="defenderDiv gameCharacter" id="rowFourCharmander" value="Charmander">
+			<p>Charmander</p>
+			<img src="http://vignette1.wikia.nocookie.net/pokemon/images/2/23/Charmander_Back_XY.gif/revision/latest?cb=20141009063457" alt="Charmander">
+			<p class="CharmanderHealth">HEALTH</p>
+		</div>
+		<div class="defenderDiv gameCharacter" id="rowFourBulbasour" value="Bulbasour">
+			<p>Bulbasour</p>
+			<img src="http://rs425.pbsrc.com/albums/pp335/Grasaldrea/ShinyBulbasauranimatedback.gif~c200" alt="Bulbasour">
+			<p class="BulbasourHealth">HEALTH</p>
+		</div>
+
+		<!-- Now a div where game messages will go -->
+		<h4 id="gameMessages"></h4>
+
+		<!-- Now the reset button -->
+		<button type="button" class="btn btn-warning resetButton">RESET</button>
+	
+	<!-- now end the container	 -->
+	</div>
+	<!-- add link to the jQuery Library -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<!-- Link to game javascript  -->
+	<script type="text/javascript" src="./assets/javascript/game.js"></script>
+
+</body>
+
+</html>
